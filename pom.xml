@@ -56,8 +56,8 @@
                <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
                <configuration>
-          <outputDirectory>/absolute/path/to/the/output/directory</outputDirectory>
-          <finalName>filename-of-generated-jar-file</finalName>
+          <outputDirectory>/home/ec2-user/mavenoutput</outputDirectory>
+          <finalName>output1</finalName>
           <attach>false</attach>
         </configuration>
       </plugin>
