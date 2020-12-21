@@ -58,7 +58,7 @@
                <configuration>
           <outputDirectory>/opt/maven/apache-maven-3.6.3/output</outputDirectory>
           <finalName>output1</finalName>
-          <attach>false</attach>
+          <attach>true</attach>
         </configuration>
       </plugin>
     </plugins>
