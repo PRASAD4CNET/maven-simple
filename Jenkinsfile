@@ -1,5 +1,10 @@
 pipeline {
     agent any
+    
+    environment{
+        NEW_VERSION = '1..0.0'
+        OLD_VERSION = '0.0.0'
+    }
    
     stages {
         stage("init") {
@@ -14,6 +19,8 @@ pipeline {
             steps {
                 script {
                     echo 'build stage'
+                    echo 'new version ${NEW_VEERSION}
+                    echo 'old version ${OLD_VEERSION}
                     //gv.buildApp()
                 }
             }
