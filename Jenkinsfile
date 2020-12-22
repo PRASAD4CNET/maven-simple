@@ -19,8 +19,8 @@ pipeline {
             steps {
                 script {
                     echo 'build stage'
-                    echo 'new version ${NEW_VERSION}
-                    echo 'old version ${OLD_VERSION}
+                    echo 'new version ${NEW_VERSION}"
+                    echo 'old version ${OLD_VERSION}'
                     //gv.buildApp()
                 }
             }
