@@ -27,5 +27,10 @@ pipeline {
                 }
             }
         }
-    }   
+    } 
+    post {
+        always{
+            echo 'this is the post stage execution'
+        }
+    }
 }
