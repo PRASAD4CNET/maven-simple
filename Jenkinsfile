@@ -21,7 +21,7 @@ pipeline {
                     gv=load "script.groovy"
                 }
             }
-        }
+        
         }
         
         /* commented this section to create a new init stage that loads script.groovy
