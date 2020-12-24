@@ -2,6 +2,9 @@ def gv //used in loading script.groovy file
 
 pipeline {
     agent any
+    tools{
+    maven 'MAVEN'
+    }
     
     parameters{
         string(name: 'version',defaultValue: '',description: 'version to deploy on prod')
