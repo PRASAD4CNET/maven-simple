@@ -1,3 +1,5 @@
+def gv //used in loading script.groovy file
+
 pipeline {
     agent any
     
@@ -13,6 +15,16 @@ pipeline {
     }
    
     stages {
+        stage("init"){
+            steps{
+                script{
+                    gv=load "script.groovy"
+                }
+            }
+        }
+        }
+        
+        /* commented this section to create a new init stage that loads script.groovy
         stage("init") {
             when{
                 expression{
@@ -25,10 +37,11 @@ pipeline {
                    //gv = load "script.groovy" 
                 }
             }
-        }
+        }*/
         stage("build") {
             steps {
                 script {
+                    gv.buildApp()
                     echo 'build stage'
                     echo "new version ${NEW_VERSION}" //displays the version 1.0.0
                     echo 'old version ${OLD_VERSION}' //displays as it is ${OLD_Version}
@@ -41,6 +54,7 @@ pipeline {
         stage("deploy") {
             steps {
                 script {
+                    gv.testApp()
                     echo 'deploy stage'
                     echo "deploying version ${params.VERSION}"
                     //gv.deployApp()
